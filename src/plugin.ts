@@ -4,6 +4,7 @@ import { toPlainObject, toString, isEmpty } from 'lodash'
 import UserModel, { IUser } from 'entities/User'
 //@ts-ignore
 import RoleModel, { IRole } from 'entities/Role'
+//@ts-ignore
 import {Crypto} from 'rapin/types/library/crypto'
 
 export class User {

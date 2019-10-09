@@ -1,6 +1,7 @@
 import { Mongoose } from 'mongoose'
 //@ts-ignore
 import { IRole } from 'entities/Role';
+//@ts-ignore
 import { Crypto } from 'rapin/types/library/crypto';
 
 export declare class User {

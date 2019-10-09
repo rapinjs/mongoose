@@ -1,3 +1,4 @@
+//@ts-ignore
 import { Registry } from 'rapin'
 
 let localRegistry: Registry
