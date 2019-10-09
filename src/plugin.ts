@@ -1,9 +1,9 @@
 import * as jwt from 'jsonwebtoken'
 import { toPlainObject, toString, isEmpty } from 'lodash'
 //@ts-ignore
-import UserModel, {IUser} from 'mongoose/User'
+import UserModel, { IUser } from 'entities/User'
 //@ts-ignore
-import RoleModel, {IRole} from 'mongoose/Role'
+import RoleModel, { IRole } from 'entities/Role'
 import {Crypto} from 'rapin/types/library/crypto'
 
 export class User {

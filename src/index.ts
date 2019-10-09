@@ -1,4 +1,4 @@
-import * as mongoose from 'mongoose'
+import mongoose from 'mongoose'
 import { User } from './plugin'
 import { isUndefined } from 'lodash'
 export * from './decorators'
