@@ -1,0 +1,35 @@
+{
+  "name": "@rapin/mongoose",
+  "version": "0.0.1",
+  "description": "Rapin Mongoose",
+  "main": "lib/index.js",
+  "typings": "types/index.d.ts",
+  "repository": "https://github.com/rapinjs/mongoose.git",
+  "author": "Alex Krasnij <krasaler@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "tslint": "tslint {src}/**/*.ts --fix",
+    "build": "rimraf lib && tsc -p .",
+    "dev": "rimraf lib && tsc -w -p ."
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.3",
+    "rapin": "^0.1.24"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.3.6",
+    "@types/mongoose": "^5.5.19",
+    "@types/node": "^12.6.8",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
