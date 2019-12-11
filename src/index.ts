@@ -6,11 +6,17 @@ import { initRegistry } from './helpers'
 export default class MongoosePlugin {
   public async afterInitRegistry({config, registry}): Promise<void> {
     try {
+      let options = {}
+
+      if(config.mongoose.options) {
+        options = {...options, ...config.mongoose.options}
+      }
       const mongooseClient = await mongoose.connect(config.mongoose.uri, {
         useFindAndModify: false,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        autoReconnect: true
+        autoReconnect: true,
+        ...options
       })
       registry.set('mongoose', mongooseClient)
     } catch (e) {
