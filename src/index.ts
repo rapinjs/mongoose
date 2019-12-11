@@ -15,7 +15,6 @@ export default class MongoosePlugin {
         useFindAndModify: false,
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        autoReconnect: true,
         ...options
       })
       registry.set('mongoose', mongooseClient)
