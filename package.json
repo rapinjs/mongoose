@@ -29,7 +29,7 @@
     "@types/mongoose": "^5.5.34",
     "@types/node": "^12.12.17",
     "rimraf": "^3.0.0",
-    "tslint": "^5.20.1",
+    "tslint": "^6.0.0",
     "typescript": "^3.7.3"
   }
 }
