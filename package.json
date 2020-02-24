@@ -1,6 +1,6 @@
 {
   "name": "@rapin/mongoose",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rapin Mongoose",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
@@ -20,16 +20,17 @@
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "mongodb": "^3.4.0",
-    "mongoose": "^5.8.0",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.2",
     "saslprep": "^1.0.3"
   },
   "devDependencies": {
-    "@types/mongodb": "^3.3.12",
-    "@types/mongoose": "^5.5.34",
-    "@types/node": "^12.12.17",
-    "rimraf": "^3.0.0",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.3"
+    "@types/lodash": "^4.14.149",
+    "@types/mongodb": "^3.3.16",
+    "@types/mongoose": "^5.7.1",
+    "@types/node": "^13.7.4",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.2"
   }
 }

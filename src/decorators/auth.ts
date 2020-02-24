@@ -1,6 +1,6 @@
 import { getRegistry } from '../helpers'
-
-export const Auth = () => {
+import {isEmpty, includes, isArray} from 'lodash'
+export const Auth = (roles: string[] | string = []) => {
   return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
     const originalMethod = descriptor.value
     descriptor.value = function(...args: any[]): void {
@@ -11,7 +11,27 @@ export const Auth = () => {
             .get('user')
             .isLogged()
         ) {
-          return originalMethod.apply(this, args)
+          if(!isEmpty(roles)) {
+            if(isArray(roles)) {
+              if(includes(roles, registry.get('user').getRole().codename)) {
+                return originalMethod.apply(this, args)
+              } else {
+                registry
+                  .get('error')
+                  .set('unauthorized')
+              }
+            } else {
+              if(roles === registry.get('user').getRole().codename) {
+                return originalMethod.apply(this, args)
+              } else {
+                registry
+                  .get('error')
+                  .set('unauthorized')
+              }
+            }
+          } else {
+            return originalMethod.apply(this, args)
+          }
         } else {
           registry
             .get('error')
