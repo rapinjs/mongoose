@@ -34,7 +34,7 @@ declare module 'rapin' {
     user: User;
   }
 }
-export declare const Auth: () => (
+export declare const Auth: (roles?: string | string[]) => (
   target: any,
   propertyKey: string,
   descriptor: PropertyDescriptor
