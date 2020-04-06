@@ -11,6 +11,7 @@ export default class MongoosePlugin {
       if(config.mongoose.options) {
         options = {...options, ...config.mongoose.options}
       }
+
       const mongooseClient = await mongoose.connect(config.mongoose.uri, {
         useFindAndModify: false,
         useNewUrlParser: true,

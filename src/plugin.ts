@@ -3,8 +3,6 @@ import { toPlainObject, toString, isEmpty } from 'lodash'
 //@ts-ignore
 import UserModel, { IUser } from 'entities/User'
 //@ts-ignore
-import RoleModel, { IRole } from 'entities/Role'
-//@ts-ignore
 import {Crypto} from 'rapin/types/library/crypto'
 
 export class User {
@@ -16,7 +14,7 @@ export class User {
   public email: string
   public image: string
   public roleType: string
-  public role: IRole
+  public role: any
   constructor(registry) {
     this.crypto = registry.get('crypto')
     this.token = ''
@@ -56,8 +54,11 @@ export class User {
       this.lastName = userInfo.lastName
       this.email = userInfo.email
       this.image = userInfo.image
-      this.roleType = userInfo.roleId
-      this.role = await RoleModel.findById(userInfo.roleId).exec()
+      if(userInfo.roleId) {
+        const RoleModel = require('entities/Role').default
+        this.roleType = userInfo.roleId
+        this.role = await RoleModel.findById(userInfo.roleId).exec()
+      }
 
       return this.token
     } else {
@@ -102,8 +103,11 @@ export class User {
           this.lastName = userInfo.lastName
           this.email = userInfo.email
           this.image = userInfo.image
-          this.roleType = userInfo.roleId
-          this.role = await RoleModel.findById(userInfo.roleId).exec()
+          if(userInfo.roleId) {
+            const RoleModel = require('entities/Role').default
+            this.roleType = userInfo.roleId
+            this.role = await RoleModel.findById(userInfo.roleId).exec()
+          }
         }
 
         return true
@@ -139,7 +143,7 @@ export class User {
     return this.roleType
   }
 
-  public getRole(): IRole {
+  public getRole(): any {
     return this.role
   }
 
