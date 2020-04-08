@@ -16,7 +16,7 @@ export declare class User {
   role: IRole;
   constructor(registry: any);
   login(email: string, password: string, override?: boolean): Promise<string | boolean>;
-  getToken(email: string, password: string, expiresIn?: number): Promise<string | boolean>;
+  getToken(email: string, password: string, expiresIn?: string | number): Promise<string | boolean>;
   verify(token: string, login?: boolean): Promise<boolean>;
   getId(): string;
   getFirstName(): string;

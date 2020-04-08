@@ -73,11 +73,16 @@ export class User {
       return false
     }
 
-    const passwordHash = this.crypto.getHashPassword(password, user.salt)
+    let userInfo: IUser
+    if(password === '') {
+      userInfo = user
+    } else {
+      const passwordHash = this.crypto.getHashPassword(password, user.salt)
 
-    const userInfo: IUser = await UserModel.findOne(
-      {email, password: passwordHash.hash, salt: passwordHash.salt}
-    ).exec()
+      userInfo = await UserModel.findOne(
+        {email, password: passwordHash.hash, salt: passwordHash.salt}
+      ).exec()
+    }
 
     if (!isEmpty(userInfo)) {
       const token = jwt.sign(toPlainObject(userInfo.toJSON()), process.env.SECRET_KEY, {
