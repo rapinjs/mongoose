@@ -36,9 +36,9 @@
   integrity sha512-ijGqzZt/b7BfzcK9vTrS6MFljQRPn5BFWOx8oE0GYxribu6uV+aA9zZuXI1zc/etK9E8nrgdoF2+LgUw7+9tJQ==
 
 "@types/mongodb@*", "@types/mongodb@^3.5.4":
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.4.tgz#3c54abf6340fd2fe7c83fb8c3f1848497db8e55d"
-  integrity sha512-1Q781+rC+hYB34Ped9dRLOWsw1yTNwqphqkRyJR/yFuoWoZ3664s6RxilVSkqEm3lwFmpTYCXtGudxSpHHGDIQ==
+  version "3.5.28"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-3.5.28.tgz#33428f358b31d0c78651a2aa6f8bb46d58b2849e"
+  integrity sha512-wSbda4QQ3QFsWUHJzC5TSYImtRDtPhPb+lW7ICMtWvvtQMQRXbVTz/Z1P5A3XujK5bZIAV7vk5CXQG6Adz7+Cw==
   dependencies:
     "@types/bson" "*"
     "@types/node" "*"
