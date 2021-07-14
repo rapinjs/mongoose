@@ -20,7 +20,7 @@
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
-    "mongodb": "^3.6.3",
+    "mongodb": "^4.0.0",
     "mongoose": "^5.10.13",
     "saslprep": "^1.0.3"
   },
