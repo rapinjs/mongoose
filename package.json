@@ -15,22 +15,24 @@
   "scripts": {
     "tslint": "tslint {src}/**/*.ts --fix",
     "build": "rimraf lib && tsc -p .",
-    "dev": "rimraf lib && tsc -w -p ."
+    "dev": "rimraf lib && tsc -w -p .",
+    "yalc-watch": "nodemon -e vue,js,scss,json -x yalc push"
   },
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.20",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.10.13",
+    "lodash": "^4.17.21",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7",
     "saslprep": "^1.0.3"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.165",
-    "@types/mongodb": "^3.5.33",
-    "@types/mongoose": "^5.10.0",
-    "@types/node": "^14.14.7",
+    "@types/lodash": "^4.14.172",
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^16.6.2",
+    "nodemon": "^2.0.12",
     "rimraf": "^3.0.2",
-    "tslint": "^6.1.1",
-    "typescript": "^4.0.5"
+    "tslint": "^6.1.3",
+    "typescript": "^4.3.5"
   }
 }
