@@ -1,6 +1,6 @@
 {
   "name": "@rapin/mongoose",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Rapin Mongoose",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
