@@ -1,6 +1,6 @@
 {
   "name": "@rapin/mongoose",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Rapin Mongoose",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
@@ -19,6 +19,7 @@
     "yalc-watch": "nodemon -e vue,js,scss,json -x yalc push"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^8.5.5",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongodb": "^4.1.0",

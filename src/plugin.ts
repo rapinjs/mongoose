@@ -45,7 +45,7 @@ export class User {
     }
 
     if (!isEmpty(userInfo)) {
-      this.token = jwt.sign(toPlainObject(userInfo.toJSON()), process.env.SECRET_KEY, {
+      this.token = jwt.sign(toPlainObject({email: userInfo.email}), process.env.SECRET_KEY, {
         expiresIn: 21600,
       })
 
@@ -85,7 +85,7 @@ export class User {
     }
 
     if (!isEmpty(userInfo)) {
-      const token = jwt.sign(toPlainObject(userInfo.toJSON()), process.env.SECRET_KEY, {
+      const token = jwt.sign(toPlainObject({email: userInfo.email}), process.env.SECRET_KEY, {
         expiresIn,
       })
 
